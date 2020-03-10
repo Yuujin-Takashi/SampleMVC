@@ -1,0 +1,61 @@
+﻿@model User;
+
+@{
+    ViewData["Title"] = "User Access";
+}
+
+<!DOCTYPE html>
+ 
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Sign up</title>
+</head>
+<body>
+
+    <p>To add user sign up entry to DB table User.<br>Add creation date entry to DB not visible for user.</p>
+
+    @using (Html.BeginForm("UserAccess","HomeController", FormMethod.Post))
+    {
+        <table>
+            <tr>
+                <th>User Detaills:</th>
+            </tr>
+            <tr>
+                <td>Username: </td>
+                <td>
+                    <input type="text" id="Username" name="Username" placeholder="Enter Username">
+                </td>
+            </tr>
+            <tr>
+                <td>First Name: </td>
+                <td>
+                    <input type="text" id="Firstname" name="Firstname" placeholder="Enter First Name">
+                </td>
+            </tr>
+            <tr>
+                <td>Last Name: </td>
+                <td>
+                    <input type="text" id="Lastname" name="Lastname" placeholder="Enter Last Name">
+                </td>
+            </tr>
+            <tr>
+                <td>Email: </td>
+                <td>
+                    <input type="email" id="Email" name="Email" placeholder="dummy@email.com">
+                </td>
+            </tr>
+            <tr>
+                <td>Password: </td>
+                <td>
+                    <input type="password" id="Password" name="Password" placeholder="Enter Password">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Submit"/></td>
+            </tr>
+        </table>
+    }
+</body>
+</html>

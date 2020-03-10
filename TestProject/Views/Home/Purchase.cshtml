@@ -1,0 +1,50 @@
+﻿@model TestPurchase;
+@{
+    ViewData["Title"] = "Purchase";
+}
+
+<!DOCTYPE html>
+ 
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Purchase:</title>
+</head>
+<body>
+
+    <h1>@ViewData["Title"]</h1>
+
+    <p>To create admin side to add Items for user view.</p>
+
+    @using (Html.BeginForm("Purchase","HomeController", FormMethod.Post))
+    {
+        <table>
+            <tr>
+                <th>Enter Item Details:</th>
+            </tr>
+            <tr>
+                <td>Item: </td>
+                <td>
+                    <input type="text" id="PurchaseItem" name="PurchaseItem" placeholder="Enter Item">
+                </td>
+            </tr>
+            <tr>
+                <td>Amount: </td>
+                <td>
+                    <input type="number" id="PurchaseValue" name="PurchaseValue" placeholder="Enter Item Amount">
+                </td>
+            </tr>
+            <tr>
+                <td>Date: </td>
+                <td>
+                    <input type="date" id="PurchaseDate" name="PurchaseDate" placeholder="MM/DD/YYYY">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Submit"/></td>
+            </tr>
+        </table>
+    }
+</body>
+</html>
